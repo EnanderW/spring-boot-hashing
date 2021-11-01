@@ -11,12 +11,13 @@ import java.util.List;
 @Setter
 public class User {
 
-    private String name, password;
+    private String name, password, salt;
     private List<Product> favorites;
 
-    public User(String name, String password) {
+    public User(String name, String password, String salt) {
         this.name = name;
         this.password = password;
+        this.salt = salt;
         this.favorites = new ArrayList<>();
     }
 }

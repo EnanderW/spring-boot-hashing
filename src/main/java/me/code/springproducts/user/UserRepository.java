@@ -2,6 +2,7 @@ package me.code.springproducts.user;
 
 import org.springframework.stereotype.Repository;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -16,5 +17,9 @@ public class UserRepository {
 
     public void save(User user) {
         users.put(user.getName().toLowerCase(), user);
+    }
+
+    public Collection<User> getAll() {
+        return users.values();
     }
 }
